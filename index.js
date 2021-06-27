@@ -42,7 +42,7 @@ function gameStatusReceived(err, data){
                             console.log(errJoin);
                         }
                         else{
-                            console.log(`${dataJoin.data.message}`.success);
+                            console.log(`Joined SUCCESSFULLY`.success);
                         }
 
                         fetchGameStatus();
