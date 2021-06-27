@@ -48,7 +48,7 @@ jobs:
         username: _json_key
         password: ${{ secrets.GOOGLE_APPLICATION_CREDENTIALS }}
         registry: eu.gcr.io
-        image_name: codecomp-bot
+        image_name: codecomp-node-bot
 
     # Create App Engine in your GCP Project
     - name: Create App Engine
@@ -59,4 +59,4 @@ jobs:
     # Deploy the Docker image to the GKE cluster
     - name: Deploy the application to Google App Engine
       run: |-
-        gcloud app deploy --version=bot-1 --project=$GCP_PROJECT --image-url=eu.gcr.io/$GCP_PROJECT/codecomp-bot --appyaml=app.yaml
+        gcloud app deploy --version=bot-1 --project=$GCP_PROJECT --image-url=eu.gcr.io/$GCP_PROJECT/codecomp-node-bot --appyaml=app.yaml
